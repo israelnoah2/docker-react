@@ -1,0 +1,1 @@
+docker run -p 4000:3000 -v /app/node_modules -v C:/Users/noah.otieno/Desktop/Docker_tuts/react_app/app:/app 531765480c92

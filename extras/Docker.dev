@@ -1,0 +1,22 @@
+FROM node:alpine;
+
+WORKDIR /app
+
+COPY ./package.json .
+
+RUN npm install
+
+CMD ["npm","run","start"]
+
+docker-compose 
+
+version:'3'
+services:
+  web:
+   build:
+     context: .
+      dockerfile:Dockerfile
+
+   ports: 
+     - "7000:3000"
+

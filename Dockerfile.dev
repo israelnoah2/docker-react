@@ -1,0 +1,19 @@
+FROM node:alpine
+
+WORKDIR /app
+
+COPY ./package.json .
+
+# /c/Users/noah.otieno/desktop/docker_tuts/react_app/app
+
+RUN npm cache clean --force
+
+RUN npm install
+
+COPY . .
+
+# RUN npm install -g create-react-app
+
+# RUN npm create-react-app .
+
+CMD ["npm","run","start"]
