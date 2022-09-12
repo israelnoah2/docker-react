@@ -1,0 +1,11 @@
+sudo: required
+# super user-level permission
+
+services:
+ - docker # we need a copy of docker
+
+before_install:
+ - docker build -f Dockerfile.dev -t docker-react .
+
+script:
+ - docker run docker-react npm run test -- --coverage
